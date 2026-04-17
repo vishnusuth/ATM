@@ -9,8 +9,8 @@ deposit.addEventListener("click",function(){
     // get input
     let amount = EnterAmount.value;
     // convert into number
-    let EnterAmount = +amount;
-    if (amount <= 0 || amount === "") {
+    amount = +amount;
+    if (amount <= 0 ) {
         showBln.textContent = "enter valid amount"
     } else {
         balance = balance + amount;
