@@ -13,6 +13,8 @@ deposit.addEventListener("click",function(){
     if (amount <= 0 || amount === "") {
         showBln.textContent = "enter valid amount"
     } else {
-        
+        balance = balance + amount;
+        showBln.textContent = "₹" + amount + " deposited | Total: ₹" + balance;
+        EnterAmount.value = "";
     } 
 })
