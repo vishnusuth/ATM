@@ -18,3 +18,21 @@ deposit.addEventListener("click",function(){
         EnterAmount.value = "";
     } 
 })
+
+WITHDRAW.addEventListener("click",function(){
+    let amount = EnterAmount.value;
+    amount = +amount;
+    if (amount <= 0) {
+        showBln.textContent = "enter valid amount"
+    } else if(amount > balance){
+        showBln.textContent = "Insufficient Balance"
+    }   else {
+        balance = balance - amount;
+        showBln.textContent = `₹${amount} withdraw And Total balance ₹${balance}`;
+    }
+    EnterAmount.value = "";
+})
+
+BalChk.addEventListener("click",function(){
+    showBln.textContent = `Your Balance ${balance}`
+})
